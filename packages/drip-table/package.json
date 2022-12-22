@@ -1,0 +1,82 @@
+{
+  "name": "drip-table",
+  "version": "2.6.3",
+  "description": "A tiny and powerful enterprise-class solution for building tables.",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "build": "father-build && tsc-alias -p tsconfig.json",
+    "analyze": "ANALYZE=1 dumi dev",
+    "prepare": "yarn build",
+    "postpublish": "git push --tags",
+    "lint": "yarn run eslint && yarn run tslint && yarn run stylelint",
+    "lint:fix": "yarn run eslint:fix && yarn run stylelint:fix",
+    "tslint": "sh ../../bin/tslint.sh **/*.ts",
+    "tslint:commit": "sh ./bin/tslint.sh",
+    "tslint:exec": "tsc --project .tsconfig-lint.json --skipLibCheck --noEmit",
+    "eslint": "eslint \"src/**/*.{js,jsx,ts,tsx,json}\" --format pretty",
+    "eslint:fix": "eslint \"src/**/*.{js,jsx,ts,tsx,json}\" --format pretty --fix",
+    "eslint:commit": "eslint --format pretty",
+    "stylelint": "stylelint \"src/**/*.{less,sass,scss,css,vue}\" --custom-formatter=../../node_modules/stylelint-formatter-pretty",
+    "stylelint:fix": "stylelint \"src/**/*.{less,sass,scss,css,vue}\" --custom-formatter=../../node_modules/stylelint-formatter-pretty --fix",
+    "stylelint:commit": "stylelint --custom-formatter=../../node_modules/stylelint-formatter-pretty"
+  },
+  "dependencies": {
+    "ajv": "^8.11.0",
+    "ajv-keywords": "^5.1.0",
+    "cheerio": "1.0.0-rc.10",
+    "classnames": "^2.3.1",
+    "domhandler": "^4.3.0",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.4",
+    "rc-checkbox": "^2.3.2",
+    "rc-dialog": "^9.0.2",
+    "rc-input-number": "^7.3.11",
+    "rc-pagination": "^3.1.17",
+    "rc-picker": "^3.0.0-4",
+    "rc-resize-observer": "^1.0.1",
+    "rc-select": "^14.1.9",
+    "rc-table": "^7.25.2",
+    "rc-textarea": "^0.3.7",
+    "rc-tooltip": "^5.2.2",
+    "rc-util": "^5.22.5",
+    "react-clipboard.js": "^2.0.16",
+    "react-dom": "^16.9.0",
+    "react-event-injector": "^1.1.2",
+    "react-window": "^1.8.6",
+    "uuid": "^8.3.2",
+    "viewerjs": "1.7.1"
+  },
+  "devDependencies": {
+    "@rollup/plugin-eslint": "^8.0.1",
+    "@types/react-window": "^1.8.5",
+    "@types/uuid": "^8.3.4",
+    "eslint-config-lvmcn": "^0.0.46",
+    "father-build-universal": "^1.21.3",
+    "sha1": "^1.1.1",
+    "tsc-alias": "^1.4.2",
+    "typescript": "^4.5.4"
+  },
+  "peerDependencies": {
+    "react": ">=16.9.0"
+  },
+  "keywords": [
+    "DripTable",
+    "Render",
+    "TableRender",
+    "Drip Design",
+    "Json Schema",
+    "React"
+  ],
+  "files": [
+    "*.md",
+    "dist"
+  ],
+  "homepage": "https://drip-table.jd.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JDFED/drip-table/issues"
+  }
+}

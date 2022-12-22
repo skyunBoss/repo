@@ -1,13 +1,27 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
-    "moduleResolution": "node",
-    "jsx": "react",
-    "esModuleInterop": true,
-    "types": ["jest"],
     "strict": true,
-    "skipLibCheck": true,
-    "declaration": true
-  }
+    "target": "es5",
+    "moduleResolution": "node",
+    "isolatedModules": true,
+    "jsx": "react",
+    "incremental": true,
+    "declaration": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "paths": {
+      "drip-table": ["./packages/drip-table/src"]
+    }
+  },
+  "rules": {
+    "react/prop-types": 0
+  },
+  "include": [
+      "**/*.ts",
+      "**/.*.ts",
+      "**/*.tsx",
+      "**/.*.tsx"
+  ],
+  "exclude": ["node_modules", "dist"]
 }

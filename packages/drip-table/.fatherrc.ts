@@ -1,5 +1,6 @@
-import eslint from '@rollup/plugin-eslint';
+import eslint from "@rollup/plugin-eslint";
 import { IBundleOptions } from 'father-build-universal/src/types.d';
+import path from 'path';
 import sha1 from 'sha1';
 
 const options: IBundleOptions = {

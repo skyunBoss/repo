@@ -1,4 +1,4 @@
-import DripTable from 'drip-table';
+import { Button } from 'drip-table';
 import React from 'react';
 
-export default () => <DripTable />;
+export default () => <Button />;
